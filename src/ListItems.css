@@ -1,0 +1,29 @@
+/* LIST */
+.listItems {
+    margin: 0;
+    padding: 0;
+}
+
+/* SINGLE ITEM */
+.list {
+    color: #333333;
+    background-color: #B8C13B;
+    width: 450px;
+    height: 100%;
+    min-height: 50px;
+    margin: 20px auto;
+    border-radius: 25px;
+}
+
+.list p {
+    font-size: large;
+    font-weight: bold;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.list span {
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+}
