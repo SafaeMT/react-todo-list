@@ -1,5 +1,5 @@
-import React from 'react';
-import './ListItems.css';
+import React from 'react'
+import './ListItems.css'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -11,7 +11,7 @@ function ListItems(props) {
                 <p>{item.text}
                     <span>
                         <FontAwesomeIcon className="faicons" icon="trash-alt"
-                        onClick={() => props.deleteItem(item.key)} />
+                            onClick={() => props.deleteItem(item.key)} />
                     </span>
                 </p>
             </div>
@@ -20,7 +20,13 @@ function ListItems(props) {
     );
 
     return (
-        <div>{listItems}</div>
+        <div className="global-list">
+            <div>{listItems}</div>
+            <footer className="footer">
+                <button type="submit" className="delete"
+                    onClick={() => props.deleteAll()}>Tout supprimer</button>
+            </footer>
+        </div>
     );
 }
 

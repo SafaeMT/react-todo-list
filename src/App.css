@@ -16,10 +16,10 @@ body {
 .App {
   background-color: #333333;
   width: 550px;
-  height: 100%;
   min-height: 600px;
   margin: 20px auto;
   border-radius: 10px;
+  position: relative;
 }
 
 /* HEADER */
@@ -45,7 +45,7 @@ body {
   outline: none;
 }
 
-#todo-list-form button {
+#todo-list-form .add {
   background-color: #F2CD5E;
   /* background-color: #D9AE89; */
   color: #333333;
@@ -57,4 +57,10 @@ body {
   border: 0;
   border-radius: 10px;
   cursor: pointer;
+}
+
+/* MAIN */
+.main {
+  height: 100%;
+  min-height: 400px;
 }

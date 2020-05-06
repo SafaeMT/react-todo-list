@@ -1,6 +1,6 @@
-import React from 'react';
-import './App.css';
-import ListItems from './ListItems.js';
+import React from 'react'
+import './App.css'
+import ListItems from './ListItems.js'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
@@ -20,6 +20,7 @@ class App extends React.Component {
     this.handleItem = this.handleItem.bind(this);
     this.addItem = this.addItem.bind(this);
     this.deleteItem = this.deleteItem.bind(this);
+    this.deleteAll = this.deleteAll.bind(this);
   }
 
   handleItem(e) {
@@ -55,16 +56,29 @@ class App extends React.Component {
     });
   }
 
+  deleteAll() {
+    this.setState({
+      items: []
+    });
+  }
+
   render() {
     return (
       <div className="App">
         <header>
           <form id="todo-list-form" onSubmit={this.addItem}>
-            <input type="text" placeholder="Saisissez une nouvelle tâche" value={this.state.currentItem.text} onChange={this.handleItem} />
-            <button type="submit">Ajouter</button>
+            <input type="text" placeholder="Saisissez une nouvelle tâche"
+              value={this.state.currentItem.text}
+              onChange={this.handleItem} />
+            <button type="submit" className="add">Ajouter</button>
           </form>
         </header>
-        <ListItems items={this.state.items} deleteItem={this.deleteItem} />
+
+        <div className="main">
+          <ListItems items={this.state.items}
+            deleteItem={this.deleteItem}
+            deleteAll={this.deleteAll} />
+        </div>
       </div>
     );
   }
