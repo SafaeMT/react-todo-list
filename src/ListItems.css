@@ -6,7 +6,6 @@
 
 /* SINGLE ITEM */
 .list {
-    color: #333333;
     background-color: #B8C13B;
     width: 450px;
     height: 100%;
@@ -20,6 +19,17 @@
     font-weight: bold;
     padding: 10px 20px;
     position: relative;
+}
+
+.list p input {
+    background-color: transparent;
+    font-size: large;
+    font-weight: bold;
+    border: 0;
+}
+
+.list p input:focus {
+    outline: none;
 }
 
 .list span {
